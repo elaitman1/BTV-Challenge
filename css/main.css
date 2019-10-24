@@ -92,8 +92,18 @@ body header .headerQCap {
   }
 }
 
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 body main .ourVision {
-  margin: 2em;
+  margin: 1em;
 }
 
 body main .ourVision h1 {
@@ -105,14 +115,10 @@ body main .ourVision p {
   font-size: 16px;
 }
 
-body main .slider .sliderWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media (min-width: 600px) {
+  body main .ourVision p {
+    padding: 0 22em 5em 22em;
+  }
 }
 
 body main .slider .sliderWrapper h2 {
@@ -147,44 +153,17 @@ body main .slider .sliderWrapper .innerSliderBackground {
           clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 94%);
 }
 
-body main .myCarouselContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 body main .myCarouselContainer .innerMyCarouselContainer {
   margin-top: 10em;
 }
 
 body main .myCarouselContainer .carousel-inner img {
-  height: 15em;
+  height: 12em;
 }
 
-body main .ourTeam {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-body main .ourTeam .ourTeamContainer {
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  text-align: center;
+body .ourTeam {
+  font-size: 24px;
+  position: relative;
+  margin-top: 7em;
 }
 /*# sourceMappingURL=main.css.map */
