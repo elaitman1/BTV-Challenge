@@ -1,0 +1,331 @@
+// $osw: 'Oswald', sans-serif;
+// $hel: "Helvetica", Arial, sans-serif;
+// $opSa: 'Open Sans', sans-serif;
+
+// $desktop: 600px;
+
+// $colors: (
+//     w: white,
+//     b: black,
+//     // primary-light: lighten(#005DFF, 40%),
+//     // primary-dark: darken(#005DFF, 40%),
+//     // accent: #FFF6BB
+// );
+
+// @function color($color-name) {
+//     @return map-get($colors, $color-name)
+// }
+
+// @mixin desktop {
+//     @media (min-width: #{$desktop}) {
+//         @content;
+//     }
+// }
+
+// body, html {
+//     overflow-x: hidden;
+// }
+
+// body {
+//     margin: 0;
+//     text-align:center;
+
+//     header {
+//         .imgOne {
+//             //good to go
+//             margin-top:-7em;
+//             margin-left:-30em;
+//             @include desktop {
+//                 margin-top:-7em;
+//                 width:100%;  
+//                 margin-left:0em;
+//             } 
+//         }
+
+//         .headerBox {
+//             //good to go
+//             height: 55px;
+//             width: 100%;
+//             background-color:color(b);
+//             position:absolute;
+//         }
+    
+//         .logo {
+//             //good to go
+//             position:absolute;
+//             margin-top:1em;
+//             margin-left:1em;
+//             width:99.23px;
+//             height:19px;
+//             z-index:1;
+//         }
+    
+//         .headerQuote {
+//             //good to go
+//             position:absolute;
+//             padding:2em;
+//             font-family:$osw;
+//             color:color(w);
+//             font-size:45px;
+//             margin-top:-12em;
+            
+            
+//             @include desktop {
+                
+//             } 
+//         }
+    
+//         .headerQCap {
+//             // width:20%;
+//             margin-top:-17em;
+//             font-family: $hel;
+//             color:color(w);
+//             font-size:18px;
+//             padding:3em;
+//             font-weight:lighter;
+//         }
+    
+//         .imgOneBorderBottom {
+//             //good to go
+//             background-color:color(b);
+//             margin-top:-4em;
+//             height:4em;
+//             margin-bottom:4em;
+//         }
+        
+//     }
+//     main {
+
+//         .ourVision{
+
+//             h1 {
+//                 font-family: $osw;
+//             }
+
+//             p {
+//                 font-family: $opSa;
+//                 font-size:16px;
+//             }
+            
+
+//             @include desktop {
+//                 // clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+//             }
+//         }
+//     }
+// }   
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+$osw: 'Oswald', sans-serif;
+$hel: "Helvetica", Arial, sans-serif;
+$opSa: 'Open Sans', sans-serif;
+
+$desktop: 600px;
+
+$colors: (
+    w: white,
+    b: black,
+    // primary-light: lighten(#005DFF, 40%),
+    // primary-dark: darken(#005DFF, 40%),
+    // accent: #FFF6BB
+);
+
+
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    text-align:center;
+
+    header {
+        display:flex;
+        line-height:-1em;
+        @include desktop {
+            flex-direction: column;
+        } 
+
+        .imgOne {
+            //good to go
+            margin-top:-7em;
+            margin-left:-30em;
+            @include desktop {
+                margin-top:-7em;
+                width:100%;  
+                margin-left:0em;
+            } 
+        }
+
+        .headerBox {
+            //good to go
+            height: 55px;
+            width: 100%;
+            background-color:color(b);
+            position:absolute;
+        }
+    
+        .logo {
+            //good to go
+            position:absolute;
+            margin-top:1em;
+            margin-left:1em;
+            width:99.23px;
+            height:19px;
+            z-index:1;
+        }
+    
+        .headerQuote {
+            //good to go
+            line-height:1em;
+            position:absolute;
+            padding:2em;
+            font-family:$osw;
+            color:color(w);
+            font-size:45px;
+            align-self:center;
+            
+            
+            @include desktop {
+                align-self:center;
+                margin-top:1em;
+            } 
+        }
+    
+        .headerQCap {
+            // width:20%;
+            margin-top:8em;
+            align-self:center;
+            position:absolute;
+            font-family: $hel;
+            color:color(w);
+            font-size:18px;
+            padding:3em;
+            font-weight:lighter;
+
+            @include desktop {
+                // align-self:center;
+                margin-top:9em;
+            } 
+        }
+    
+        // .BorderBottom {
+        //     //good to go
+        //     background-color:color(b);
+        //     height:3em;
+        //     position:absolute;
+        //     // margin-bottom:4em;
+        //     align-self:flex-end;
+
+        //     @include desktop {
+        //     position:none;
+        //     margin-top:20em;
+        //     // align-self:flex-end;
+
+        //     //     // flex-direction:row;
+        //     //     align-self:center;
+                
+        //         // margin-top:20em;
+        //     }
+        // } 
+        
+    }
+
+    main {
+
+        .ourVision {
+            
+            margin:2em;
+            
+            h1 {
+                font-family: $osw;
+            }
+
+            p {
+                font-family: $opSa;
+                font-size:16px;
+            }
+        }
+
+        .slider {
+            
+            .sliderWrapper {
+                display:flex;
+                flex-direction:column;
+
+                h2 {
+                    text-align:center;
+                    position:absolute;
+                    z-index:1;
+                    padding:55px;
+                    font-size:18px;
+                    color: color(w);
+                    font-family:$osw;
+                    align-self:center;
+                    font-weight:lighter;
+                }
+                
+                .outerSliderBackground {
+                    background-color:color(b);
+                    height:30em;
+                    width:100%;
+                    position:absolute;
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+
+                }
+
+                .innerSliderBackground {
+                    background-color:#ED503E;
+                    height:30em;
+                    width:100%;
+                    position:absolute;
+                    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 94%);
+
+                }
+                
+            }
+        }
+
+        .myCarouselContainer {
+            display:flex;
+            flex-direction:column;
+            .innerMyCarouselContainer{
+                margin-top:10em;
+                
+            }
+            
+            .carousel-inner img {
+                height:15em;
+            }
+        }
+
+        .ourTeam {
+            display:flex;
+            position:absolute;
+            flex-direction:column;
+            .ourTeamContainer{
+                align-content:center;
+                align-items:center;
+                align-self:center;
+                text-align:center;
+            }
+            
+        }
+    
+
+        
+    }
+}
+
